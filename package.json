@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@google-cloud/vision": "^2.4.0",
+    "esnext": "^3.3.1",
+    "node.js": "^0.0.1-security"
+  }
+}

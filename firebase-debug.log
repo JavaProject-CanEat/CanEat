@@ -1,0 +1,402 @@
+[debug] [2021-11-02T13:25:03.971Z] ----------------------------------------------------------------------
+[debug] [2021-11-02T13:25:03.973Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\banja\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions:annotateImage
+[debug] [2021-11-02T13:25:03.973Z] CLI Version:   9.21.0
+[debug] [2021-11-02T13:25:03.973Z] Platform:      win32
+[debug] [2021-11-02T13:25:03.974Z] Node Version:  v16.13.0
+[debug] [2021-11-02T13:25:03.974Z] Time:          Tue Nov 02 2021 22:25:03 GMT+0900 (대한민국 표준시)
+[debug] [2021-11-02T13:25:03.975Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-11-02T13:25:04.028Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-11-02T13:25:04.028Z] > authorizing via signed-in user (banjakk@gmail.com)
+[debug] [2021-11-02T13:25:04.028Z] [iam] checking project javaproject-caneat for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2021-11-02T13:25:04.031Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-11-02T13:25:04.031Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-02T13:25:04.267Z] <<< HTTP RESPONSE 200 {"date":"Tue, 02 Nov 2021 13:25:04 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:25:04.275Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/javaproject-caneat:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2021-11-02T13:25:05.112Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Nov 2021 13:25:04 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=581","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:25:05.113Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/javaproject-caneat/serviceAccounts/javaproject-caneat@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2021-11-02T13:25:05.518Z] <<< HTTP RESPONSE 404 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Tue, 02 Nov 2021 13:25:05 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:25:05.518Z] <<< HTTP RESPONSE BODY {"error":{"code":404,"message":"Service account projects/javaproject-caneat/serviceAccounts/javaproject-caneat@appspot.gserviceaccount.com does not exist.","status":"NOT_FOUND"}}
+[debug] [2021-11-02T13:25:05.519Z] [functions] service account IAM check errored, deploy may fail: HTTP Error: 404, Service account projects/javaproject-caneat/serviceAccounts/javaproject-caneat@appspot.gserviceaccount.com does not exist. {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":404,"message":"Service account projects/javaproject-caneat/serviceAccounts/javaproject-caneat@appspot.gserviceaccount.com does not exist.","status":"NOT_FOUND"}},"response":{"statusCode":404,"body":{"error":{"code":404,"message":"Service account projects/javaproject-caneat/serviceAccounts/javaproject-caneat@appspot.gserviceaccount.com does not exist.","status":"NOT_FOUND"}},"headers":{"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Tue, 02 Nov 2021 13:25:05 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"},"request":{"uri":{"protocol":"https:","slashes":true,"auth":null,"host":"iam.googleapis.com","port":443,"hostname":"iam.googleapis.com","hash":null,"search":null,"query":null,"pathname":"/v1/projects/javaproject-caneat/serviceAccounts/javaproject-caneat@appspot.gserviceaccount.com:testIamPermissions","path":"/v1/projects/javaproject-caneat/serviceAccounts/javaproject-caneat@appspot.gserviceaccount.com:testIamPermissions","href":"https://iam.googleapis.com/v1/projects/javaproject-caneat/serviceAccounts/javaproject-caneat@appspot.gserviceaccount.com:testIamPermissions"},"method":"POST"}}},"exit":1,"message":"HTTP Error: 404, Service account projects/javaproject-caneat/serviceAccounts/javaproject-caneat@appspot.gserviceaccount.com does not exist.","status":404}
+[info] 
+[info] === Deploying to 'javaproject-caneat'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] +  functions: Finished running predeploy script. 
+[debug] [2021-11-02T13:25:16.693Z] Validating nodejs source
+[debug] [2021-11-02T13:25:19.079Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint \"src/**/*\"",
+    "build": "tsc",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "10"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^9.4.0",
+    "firebase-functions": "^3.11.0",
+    "@google-cloud/vision": "^2.1.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.9.1",
+    "@typescript-eslint/parser": "^3.8.0",
+    "eslint": "^7.6.0",
+    "eslint-plugin-import": "^2.22.0",
+    "typescript": "^3.8.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2021-11-02T13:25:19.080Z] Building nodejs source
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2021-11-02T13:25:19.081Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/javaproject-caneat/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2021-11-02T13:25:19.082Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/javaproject-caneat/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2021-11-02T13:25:19.082Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/javaproject-caneat/services/cloudbuild.googleapis.com  
+ 
+[debug] [2021-11-02T13:25:20.190Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Nov 2021 13:25:20 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:25:20.252Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Nov 2021 13:25:20 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2021-11-02T13:25:20.362Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Nov 2021 13:25:20 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2021-11-02T13:25:20.364Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/javaproject-caneat/adminSdkConfig  
+ 
+[debug] [2021-11-02T13:25:20.884Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Nov 2021 13:25:20 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:25:20.885Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/javaproject-caneat/configs  
+ 
+[debug] [2021-11-02T13:25:21.385Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Nov 2021 13:25:21 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:25:21.582Z] Analyzing nodejs backend spec
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged functions (89.51 KB) for uploading 
+[debug] [2021-11-02T13:25:22.423Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/javaproject-caneat/locations/-/functions  
+ 
+[debug] [2021-11-02T13:25:23.432Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Nov 2021 13:25:23 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:25:23.433Z] [functions] found 1 new HTTP functions, testing setIamPolicy permission...
+[debug] [2021-11-02T13:25:23.433Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/javaproject-caneat:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2021-11-02T13:25:24.162Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Nov 2021 13:25:24 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=565","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:25:24.163Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2021-11-02T13:25:24.164Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/javaproject-caneat/locations/us-central1/functions:generateUploadUrl  
+ 
+[debug] [2021-11-02T13:25:25.200Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Nov 2021 13:25:25 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:25:25.201Z] >>> HTTP REQUEST PUT https://storage.googleapis.com/gcf-upload-us-central1-43fbe8fb-1398-4bce-8470-ec1120e915e0/a0e8e47a-424d-46f9-937c-b897ac673ae4.zip?GoogleAccessId=service-229817774734@gcf-admin-robot.iam.gserviceaccount.com&Expires=1635861324&Signature=jCcqBxj0WS8ftgXgCDUUlJttATM371C5SLaoedaV9wN%2B65DGQuEc0NCYY9FDq32BT2DeYHn0tMbA2Ln86yfKNfaySroKzYk2hhhARud%2BIyfnvR5DqYFokJFoSMZgN%2FZARAJ9J67DkvJcceoExrn65Uo%2BFs0RoBLHg2s8nSFKPcTVZqlx0DQ2iS%2BhqFN2avnHcc3fcXnInfGwbcnDVKRQs5llCmM58f4XFZhPaHxseoLajMWnf0wPmgWH7TEkwA4%2FmHxIWufwcZ5gVvnaVCnjiKlE6SKNFSFGwjTIfsrGCkgYTkyq3qUyUYbhqBWgRa80fhH9%2Fq9bG6GDSrhdVcfsiA%3D%3D  
+ <request body omitted>
+[debug] [2021-11-02T13:25:25.483Z] <<< HTTP RESPONSE 200 {"x-guploader-uploadid":"ADPycdu9KOd4a-YxESWPPa93tu93JiXHx7rCsK7Ql934QQqloLAKZ1nUbRsP6FUbSm67MDFz543fN5Jq-T3_EqHyse8619ceUw","etag":"\"bb9dab7c01b544de406ffbd5af4cf773\"","x-goog-generation":"1635859525328679","x-goog-metageneration":"1","x-goog-hash":"crc32c=QgWbtw==, md5=u52rfAG1RN5Ab/vVr0z3cw==","x-goog-stored-content-length":"91655","x-goog-stored-content-encoding":"identity","vary":"Origin","content-length":"0","date":"Tue, 02 Nov 2021 13:25:25 GMT","server":"UploadServer","content-type":"text/html; charset=UTF-8","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""}
+[info] +  functions: functions folder uploaded successfully 
+[info] i  functions: creating Node.js 10 function annotateImage(us-central1)... 
+[debug] [2021-11-02T13:25:25.486Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/javaproject-caneat/locations/us-central1/functions  
+ {"name":"projects/javaproject-caneat/locations/us-central1/functions/annotateImage","sourceUploadUrl":"https://storage.googleapis.com/gcf-upload-us-central1-43fbe8fb-1398-4bce-8470-ec1120e915e0/a0e8e47a-424d-46f9-937c-b897ac673ae4.zip?GoogleAccessId=service-229817774734@gcf-admin-robot.iam.gserviceaccount.com&Expires=1635861324&Signature=jCcqBxj0WS8ftgXgCDUUlJttATM371C5SLaoedaV9wN%2B65DGQuEc0NCYY9FDq32BT2DeYHn0tMbA2Ln86yfKNfaySroKzYk2hhhARud%2BIyfnvR5DqYFokJFoSMZgN%2FZARAJ9J67DkvJcceoExrn65Uo%2BFs0RoBLHg2s8nSFKPcTVZqlx0DQ2iS%2BhqFN2avnHcc3fcXnInfGwbcnDVKRQs5llCmM58f4XFZhPaHxseoLajMWnf0wPmgWH7TEkwA4%2FmHxIWufwcZ5gVvnaVCnjiKlE6SKNFSFGwjTIfsrGCkgYTkyq3qUyUYbhqBWgRa80fhH9%2Fq9bG6GDSrhdVcfsiA%3D%3D","entryPoint":"annotateImage","runtime":"nodejs10","labels":{"deployment-callable":"true","deployment-tool":"cli-firebase"},"httpsTrigger":{},"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"javaproject-caneat\",\"databaseURL\":\"https://javaproject-caneat-default-rtdb.firebaseio.com\",\"storageBucket\":\"javaproject-caneat.appspot.com\",\"locationId\":\"us-central\"}","GCLOUD_PROJECT":"javaproject-caneat"}}
+[debug] [2021-11-02T13:25:26.127Z] <<< HTTP RESPONSE 400 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Tue, 02 Nov 2021 13:25:26 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:25:26.127Z] <<< HTTP RESPONSE BODY {"error":{"code":400,"message":"Default service account 'javaproject-caneat@appspot.gserviceaccount.com' doesn't exist. Please recreate this account (for example by disabling and enabling the Cloud Functions API), or specify a different account. Please visit https://cloud.google.com/functions/docs/troubleshooting for in-depth troubleshooting documentation.","status":"FAILED_PRECONDITION"}}
+[warn] !  functions: failed to create function projects/javaproject-caneat/locations/us-central1/functions/annotateImage 
+[debug] [2021-11-02T13:25:26.131Z] Total Function Deployment time: 644
+[debug] [2021-11-02T13:25:26.132Z] 1 Functions Deployed
+[debug] [2021-11-02T13:25:26.132Z] 1 Functions Errored
+[debug] [2021-11-02T13:25:26.132Z] 0 Function Deployments Aborted
+[debug] [2021-11-02T13:25:26.132Z] Average Function Deployment time: 643
+[info] 
+[info] Functions deploy had errors with the following functions:
+	annotateImage(us-central1)
+[info] 
+[info] Because there were errors creating or updating functions, the following functions were not deleted
+[info] To delete these, use firebase functions:delete
+[debug] [2021-11-02T13:25:26.334Z] Missing URI for HTTPS function in printTriggerUrls. This shouldn't happen
+[info] i  functions: cleaning up build files... 
+[debug] [2021-11-02T13:25:26.336Z] > refreshing access token with scopes: []
+[debug] [2021-11-02T13:25:26.336Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-02T13:25:26.545Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Tue, 02 Nov 2021 13:25:26 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:25:26.565Z] >>> [apiv2][query] GET https://us.gcr.io/v2/javaproject-caneat/gcf/us-central1/tags/list [none]
+[debug] [2021-11-02T13:25:26.950Z] <<< [apiv2][status] GET https://us.gcr.io/v2/javaproject-caneat/gcf/us-central1/tags/list 200
+[debug] [2021-11-02T13:25:26.950Z] <<< [apiv2][body] GET https://us.gcr.io/v2/javaproject-caneat/gcf/us-central1/tags/list {"child":[],"manifest":{},"name":"javaproject-caneat/gcf/us-central1","tags":[]}
+[debug] [2021-11-02T13:25:26.950Z] Could not find image for function projects/javaproject-caneat/locations/us-central1/functions/annotateImage
+[debug] [2021-11-02T13:25:27.133Z] Error: Failed to create function annotateImage in region us-central1
+    at C:\Users\banja\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:35:11
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Fabricator.createV1Function (C:\Users\banja\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:158:32)
+    at async Fabricator.createEndpoint (C:\Users\banja\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:113:13)
+    at async handle (C:\Users\banja\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:72:17)
+[error] 
+[error] Error: There was an error deploying functions
+[debug] [2021-11-02T13:28:41.375Z] ----------------------------------------------------------------------
+[debug] [2021-11-02T13:28:41.377Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\banja\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions:annotateImage
+[debug] [2021-11-02T13:28:41.377Z] CLI Version:   9.21.0
+[debug] [2021-11-02T13:28:41.377Z] Platform:      win32
+[debug] [2021-11-02T13:28:41.377Z] Node Version:  v16.13.0
+[debug] [2021-11-02T13:28:41.378Z] Time:          Tue Nov 02 2021 22:28:41 GMT+0900 (대한민국 표준시)
+[debug] [2021-11-02T13:28:41.378Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-11-02T13:28:41.432Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-11-02T13:28:41.432Z] > authorizing via signed-in user (banjakk@gmail.com)
+[debug] [2021-11-02T13:28:41.432Z] [iam] checking project javaproject-caneat for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2021-11-02T13:28:41.435Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-11-02T13:28:41.435Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-02T13:28:41.681Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Tue, 02 Nov 2021 13:28:41 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:28:41.702Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/javaproject-caneat:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2021-11-02T13:28:42.480Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Nov 2021 13:28:42 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=569","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:28:42.481Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/javaproject-caneat/serviceAccounts/javaproject-caneat@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2021-11-02T13:28:42.913Z] <<< HTTP RESPONSE 404 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Tue, 02 Nov 2021 13:28:42 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:28:42.914Z] <<< HTTP RESPONSE BODY {"error":{"code":404,"message":"Service account projects/javaproject-caneat/serviceAccounts/javaproject-caneat@appspot.gserviceaccount.com does not exist.","status":"NOT_FOUND"}}
+[debug] [2021-11-02T13:28:42.918Z] [functions] service account IAM check errored, deploy may fail: HTTP Error: 404, Service account projects/javaproject-caneat/serviceAccounts/javaproject-caneat@appspot.gserviceaccount.com does not exist. {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":404,"message":"Service account projects/javaproject-caneat/serviceAccounts/javaproject-caneat@appspot.gserviceaccount.com does not exist.","status":"NOT_FOUND"}},"response":{"statusCode":404,"body":{"error":{"code":404,"message":"Service account projects/javaproject-caneat/serviceAccounts/javaproject-caneat@appspot.gserviceaccount.com does not exist.","status":"NOT_FOUND"}},"headers":{"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Tue, 02 Nov 2021 13:28:42 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"},"request":{"uri":{"protocol":"https:","slashes":true,"auth":null,"host":"iam.googleapis.com","port":443,"hostname":"iam.googleapis.com","hash":null,"search":null,"query":null,"pathname":"/v1/projects/javaproject-caneat/serviceAccounts/javaproject-caneat@appspot.gserviceaccount.com:testIamPermissions","path":"/v1/projects/javaproject-caneat/serviceAccounts/javaproject-caneat@appspot.gserviceaccount.com:testIamPermissions","href":"https://iam.googleapis.com/v1/projects/javaproject-caneat/serviceAccounts/javaproject-caneat@appspot.gserviceaccount.com:testIamPermissions"},"method":"POST"}}},"exit":1,"message":"HTTP Error: 404, Service account projects/javaproject-caneat/serviceAccounts/javaproject-caneat@appspot.gserviceaccount.com does not exist.","status":404}
+[info] 
+[info] === Deploying to 'javaproject-caneat'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] +  functions: Finished running predeploy script. 
+[debug] [2021-11-02T13:28:54.053Z] Validating nodejs source
+[debug] [2021-11-02T13:28:56.436Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint \"src/**/*\"",
+    "build": "tsc",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "14"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^9.4.0",
+    "firebase-functions": "^3.11.0",
+    "@google-cloud/vision": "^2.1.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.9.1",
+    "@typescript-eslint/parser": "^3.8.0",
+    "eslint": "^7.6.0",
+    "eslint-plugin-import": "^2.22.0",
+    "typescript": "^3.8.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2021-11-02T13:28:56.436Z] Building nodejs source
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2021-11-02T13:28:56.438Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/javaproject-caneat/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2021-11-02T13:28:56.438Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/javaproject-caneat/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2021-11-02T13:28:56.439Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/javaproject-caneat/services/cloudbuild.googleapis.com  
+ 
+[debug] [2021-11-02T13:28:57.544Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Nov 2021 13:28:57 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:28:57.613Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Nov 2021 13:28:57 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2021-11-02T13:28:57.640Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Nov 2021 13:28:57 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2021-11-02T13:28:57.641Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/javaproject-caneat/adminSdkConfig  
+ 
+[debug] [2021-11-02T13:28:58.133Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Nov 2021 13:28:58 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:28:58.133Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/javaproject-caneat/configs  
+ 
+[debug] [2021-11-02T13:28:58.646Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Nov 2021 13:28:58 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:28:58.826Z] Analyzing nodejs backend spec
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged functions (89.51 KB) for uploading 
+[debug] [2021-11-02T13:28:59.698Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/javaproject-caneat/locations/-/functions  
+ 
+[debug] [2021-11-02T13:29:00.416Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Nov 2021 13:29:00 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:29:00.417Z] [functions] found 1 new HTTP functions, testing setIamPolicy permission...
+[debug] [2021-11-02T13:29:00.417Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/javaproject-caneat:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2021-11-02T13:29:01.142Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Nov 2021 13:29:01 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=576","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:29:01.142Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2021-11-02T13:29:01.143Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/javaproject-caneat/locations/us-central1/functions:generateUploadUrl  
+ 
+[debug] [2021-11-02T13:29:01.997Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Nov 2021 13:29:01 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:29:01.998Z] >>> HTTP REQUEST PUT https://storage.googleapis.com/gcf-upload-us-central1-43fbe8fb-1398-4bce-8470-ec1120e915e0/f2e0a994-9b17-4403-8d1d-fbd461072433.zip?GoogleAccessId=service-229817774734@gcf-admin-robot.iam.gserviceaccount.com&Expires=1635861541&Signature=Hn6%2B2XEdEprSiQdczkIC1BM8HhGJGigdH8QgOR7YNzPP5s4%2Bg5cYBSpTHeZG0Mlyj72GSrXjonUHYbnV9R%2BiU3KF8hNYpS4q0Cn%2BlHAVZK6CwaneTLAsiLMa3NvgRIHINGcs%2FFZydmMXzgpuXAcrWV2K1RFTKIQ8hIIgVVDQk3tjh7T0CPbRTvfanA9NdKrZfQ%2FpkCzdrnAIxff2CZ4ZNYsV8VVhO%2BaN1RHPsZQHMlwI6mLZC9QGaMGC3uSItiyCHY1graf0oHh0YpjXV7rH0LFyHnAE6q5EMsEl5XdA4Nw0VxzjIPVNieNXjcyiDGiyFeLwqksGxdhWw5tlLAYg0w%3D%3D  
+ <request body omitted>
+[debug] [2021-11-02T13:29:02.308Z] <<< HTTP RESPONSE 200 {"x-guploader-uploadid":"ADPycdufQ0vFdEXkRwVLA-e-AjeDcsgVg7_RtoeQDbsvL7gH09hKBvyrjO29-y-guY-oc-RHLYuV-YxrxS3ab3NZLM-QW-iWfQ","etag":"\"96e563dd97d70eabb46694634052b9c7\"","x-goog-generation":"1635859742151649","x-goog-metageneration":"1","x-goog-hash":"crc32c=TeRJsA==, md5=luVj3ZfXDqu0ZpRjQFK5xw==","x-goog-stored-content-length":"91655","x-goog-stored-content-encoding":"identity","vary":"Origin","content-length":"0","date":"Tue, 02 Nov 2021 13:29:02 GMT","server":"UploadServer","content-type":"text/html; charset=UTF-8","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""}
+[info] +  functions: functions folder uploaded successfully 
+[info] i  functions: creating Node.js 14 function annotateImage(us-central1)... 
+[debug] [2021-11-02T13:29:02.312Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/javaproject-caneat/locations/us-central1/functions  
+ {"name":"projects/javaproject-caneat/locations/us-central1/functions/annotateImage","sourceUploadUrl":"https://storage.googleapis.com/gcf-upload-us-central1-43fbe8fb-1398-4bce-8470-ec1120e915e0/f2e0a994-9b17-4403-8d1d-fbd461072433.zip?GoogleAccessId=service-229817774734@gcf-admin-robot.iam.gserviceaccount.com&Expires=1635861541&Signature=Hn6%2B2XEdEprSiQdczkIC1BM8HhGJGigdH8QgOR7YNzPP5s4%2Bg5cYBSpTHeZG0Mlyj72GSrXjonUHYbnV9R%2BiU3KF8hNYpS4q0Cn%2BlHAVZK6CwaneTLAsiLMa3NvgRIHINGcs%2FFZydmMXzgpuXAcrWV2K1RFTKIQ8hIIgVVDQk3tjh7T0CPbRTvfanA9NdKrZfQ%2FpkCzdrnAIxff2CZ4ZNYsV8VVhO%2BaN1RHPsZQHMlwI6mLZC9QGaMGC3uSItiyCHY1graf0oHh0YpjXV7rH0LFyHnAE6q5EMsEl5XdA4Nw0VxzjIPVNieNXjcyiDGiyFeLwqksGxdhWw5tlLAYg0w%3D%3D","entryPoint":"annotateImage","runtime":"nodejs14","labels":{"deployment-callable":"true","deployment-tool":"cli-firebase"},"httpsTrigger":{},"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"javaproject-caneat\",\"databaseURL\":\"https://javaproject-caneat-default-rtdb.firebaseio.com\",\"storageBucket\":\"javaproject-caneat.appspot.com\",\"locationId\":\"us-central\"}","GCLOUD_PROJECT":"javaproject-caneat"}}
+[debug] [2021-11-02T13:29:03.179Z] <<< HTTP RESPONSE 400 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Tue, 02 Nov 2021 13:29:03 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:29:03.179Z] <<< HTTP RESPONSE BODY {"error":{"code":400,"message":"Default service account 'javaproject-caneat@appspot.gserviceaccount.com' doesn't exist. Please recreate this account (for example by disabling and enabling the Cloud Functions API), or specify a different account. Please visit https://cloud.google.com/functions/docs/troubleshooting for in-depth troubleshooting documentation.","status":"FAILED_PRECONDITION"}}
+[warn] !  functions: failed to create function projects/javaproject-caneat/locations/us-central1/functions/annotateImage 
+[debug] [2021-11-02T13:29:03.183Z] Total Function Deployment time: 870
+[debug] [2021-11-02T13:29:03.183Z] 1 Functions Deployed
+[debug] [2021-11-02T13:29:03.183Z] 1 Functions Errored
+[debug] [2021-11-02T13:29:03.183Z] 0 Function Deployments Aborted
+[debug] [2021-11-02T13:29:03.183Z] Average Function Deployment time: 869
+[info] 
+[info] Functions deploy had errors with the following functions:
+	annotateImage(us-central1)
+[info] 
+[info] Because there were errors creating or updating functions, the following functions were not deleted
+[info] To delete these, use firebase functions:delete
+[debug] [2021-11-02T13:29:03.389Z] Missing URI for HTTPS function in printTriggerUrls. This shouldn't happen
+[info] i  functions: cleaning up build files... 
+[debug] [2021-11-02T13:29:03.391Z] > refreshing access token with scopes: []
+[debug] [2021-11-02T13:29:03.391Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-02T13:29:03.626Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Tue, 02 Nov 2021 13:29:03 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:29:03.647Z] >>> [apiv2][query] GET https://us.gcr.io/v2/javaproject-caneat/gcf/us-central1/tags/list [none]
+[debug] [2021-11-02T13:29:04.018Z] <<< [apiv2][status] GET https://us.gcr.io/v2/javaproject-caneat/gcf/us-central1/tags/list 200
+[debug] [2021-11-02T13:29:04.018Z] <<< [apiv2][body] GET https://us.gcr.io/v2/javaproject-caneat/gcf/us-central1/tags/list {"child":[],"manifest":{},"name":"javaproject-caneat/gcf/us-central1","tags":[]}
+[debug] [2021-11-02T13:29:04.019Z] Could not find image for function projects/javaproject-caneat/locations/us-central1/functions/annotateImage
+[debug] [2021-11-02T13:29:04.198Z] Error: Failed to create function annotateImage in region us-central1
+    at C:\Users\banja\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:35:11
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Fabricator.createV1Function (C:\Users\banja\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:158:32)
+    at async Fabricator.createEndpoint (C:\Users\banja\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:113:13)
+    at async handle (C:\Users\banja\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:72:17)
+[error] 
+[error] Error: There was an error deploying functions
+[debug] [2021-11-02T13:34:25.143Z] ----------------------------------------------------------------------
+[debug] [2021-11-02T13:34:25.144Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\banja\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions:annotateImage
+[debug] [2021-11-02T13:34:25.145Z] CLI Version:   9.21.0
+[debug] [2021-11-02T13:34:25.145Z] Platform:      win32
+[debug] [2021-11-02T13:34:25.145Z] Node Version:  v16.13.0
+[debug] [2021-11-02T13:34:25.146Z] Time:          Tue Nov 02 2021 22:34:25 GMT+0900 (대한민국 표준시)
+[debug] [2021-11-02T13:34:25.146Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-11-02T13:34:25.199Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-11-02T13:34:25.199Z] > authorizing via signed-in user (banjakk@gmail.com)
+[debug] [2021-11-02T13:34:25.200Z] [iam] checking project javaproject-caneat for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2021-11-02T13:34:25.202Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-11-02T13:34:25.203Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-02T13:34:25.434Z] <<< HTTP RESPONSE 200 {"date":"Tue, 02 Nov 2021 13:34:25 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:34:25.443Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/javaproject-caneat:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2021-11-02T13:34:26.299Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Nov 2021 13:34:26 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=571","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:34:26.300Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/javaproject-caneat/serviceAccounts/javaproject-caneat@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2021-11-02T13:34:27.152Z] <<< HTTP RESPONSE 404 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Tue, 02 Nov 2021 13:34:27 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:34:27.152Z] <<< HTTP RESPONSE BODY {"error":{"code":404,"message":"Service account projects/javaproject-caneat/serviceAccounts/javaproject-caneat@appspot.gserviceaccount.com does not exist.","status":"NOT_FOUND"}}
+[debug] [2021-11-02T13:34:27.153Z] [functions] service account IAM check errored, deploy may fail: HTTP Error: 404, Service account projects/javaproject-caneat/serviceAccounts/javaproject-caneat@appspot.gserviceaccount.com does not exist. {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":404,"message":"Service account projects/javaproject-caneat/serviceAccounts/javaproject-caneat@appspot.gserviceaccount.com does not exist.","status":"NOT_FOUND"}},"response":{"statusCode":404,"body":{"error":{"code":404,"message":"Service account projects/javaproject-caneat/serviceAccounts/javaproject-caneat@appspot.gserviceaccount.com does not exist.","status":"NOT_FOUND"}},"headers":{"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Tue, 02 Nov 2021 13:34:27 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"},"request":{"uri":{"protocol":"https:","slashes":true,"auth":null,"host":"iam.googleapis.com","port":443,"hostname":"iam.googleapis.com","hash":null,"search":null,"query":null,"pathname":"/v1/projects/javaproject-caneat/serviceAccounts/javaproject-caneat@appspot.gserviceaccount.com:testIamPermissions","path":"/v1/projects/javaproject-caneat/serviceAccounts/javaproject-caneat@appspot.gserviceaccount.com:testIamPermissions","href":"https://iam.googleapis.com/v1/projects/javaproject-caneat/serviceAccounts/javaproject-caneat@appspot.gserviceaccount.com:testIamPermissions"},"method":"POST"}}},"exit":1,"message":"HTTP Error: 404, Service account projects/javaproject-caneat/serviceAccounts/javaproject-caneat@appspot.gserviceaccount.com does not exist.","status":404}
+[info] 
+[info] === Deploying to 'javaproject-caneat'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] +  functions: Finished running predeploy script. 
+[debug] [2021-11-02T13:34:38.261Z] Validating nodejs source
+[debug] [2021-11-02T13:34:40.496Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint \"src/**/*\"",
+    "build": "tsc",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "14"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^9.4.0",
+    "firebase-functions": "^3.11.0",
+    "@google-cloud/vision": "^2.1.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.9.1",
+    "@typescript-eslint/parser": "^3.8.0",
+    "eslint": "^7.6.0",
+    "eslint-plugin-import": "^2.22.0",
+    "typescript": "^3.8.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2021-11-02T13:34:40.496Z] Building nodejs source
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2021-11-02T13:34:40.498Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/javaproject-caneat/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2021-11-02T13:34:40.498Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/javaproject-caneat/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2021-11-02T13:34:40.498Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/javaproject-caneat/services/cloudbuild.googleapis.com  
+ 
+[debug] [2021-11-02T13:34:41.735Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Nov 2021 13:34:41 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:34:41.803Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Nov 2021 13:34:41 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2021-11-02T13:34:41.867Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Nov 2021 13:34:41 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2021-11-02T13:34:41.869Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/javaproject-caneat/adminSdkConfig  
+ 
+[debug] [2021-11-02T13:34:42.393Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Nov 2021 13:34:42 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:34:42.394Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/javaproject-caneat/configs  
+ 
+[debug] [2021-11-02T13:34:42.944Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Nov 2021 13:34:42 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:34:43.154Z] Analyzing nodejs backend spec
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged functions (89.51 KB) for uploading 
+[debug] [2021-11-02T13:34:44.000Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/javaproject-caneat/locations/-/functions  
+ 
+[debug] [2021-11-02T13:34:44.829Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Nov 2021 13:34:44 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:34:44.831Z] [functions] found 1 new HTTP functions, testing setIamPolicy permission...
+[debug] [2021-11-02T13:34:44.831Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/javaproject-caneat:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2021-11-02T13:34:45.639Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Nov 2021 13:34:45 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=585","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:34:45.639Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2021-11-02T13:34:45.639Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/javaproject-caneat/locations/us-central1/functions:generateUploadUrl  
+ 
+[debug] [2021-11-02T13:34:46.788Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Nov 2021 13:34:46 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:34:46.789Z] >>> HTTP REQUEST PUT https://storage.googleapis.com/gcf-upload-us-central1-43fbe8fb-1398-4bce-8470-ec1120e915e0/839139e4-68fd-42b7-b316-05e568e44489.zip?GoogleAccessId=service-229817774734@gcf-admin-robot.iam.gserviceaccount.com&Expires=1635861886&Signature=MHckooaHUvoaEeUjqpxJeRhI%2FUApRB9qypJPARBTDmS%2FqY0IiAvh1AG4cenPYBNOaD3Cn1DGbT1p2VxyyKoOzaHef7LgB9CRnsv2i41J4cKYS4tRAMqRIMvk5BCv2q3shIJuFpUnl1fQaDI2LxhlxwE9Zt4jDTbbmnlfknu8qgW3%2BQsvEi7w%2B5aTdVHsSOClBVTR5gyvmLxP6uxZHEvvu1zb87BY2nxMBCZf0jMoXEiD%2FRCtoLTzYepnN1fekAyT5K%2Bxs49J%2BGwowYtKeCF3zz4JBZ1t7loBG509py6M2k5Fb7kcpycS8BPAO1nfrDmaDqDmxTJdKpRuoulADhjDfw%3D%3D  
+ <request body omitted>
+[debug] [2021-11-02T13:34:47.082Z] <<< HTTP RESPONSE 200 {"x-guploader-uploadid":"ADPycdvJf1eiZgoNP5ZzrJ5rS78X2iVjuemZo3v5z76Obu_-jXNuYFuYECR60Tk3AEsuyK-82UQPT6lhPINqSaktFTImP8v0zw","etag":"\"94bd56539cc3b19cdb39b229dad528d4\"","x-goog-generation":"1635860086930433","x-goog-metageneration":"1","x-goog-hash":"crc32c=YgwUXw==, md5=lL1WU5zDsZzbObIp2tUo1A==","x-goog-stored-content-length":"91655","x-goog-stored-content-encoding":"identity","vary":"Origin","content-length":"0","date":"Tue, 02 Nov 2021 13:34:47 GMT","server":"UploadServer","content-type":"text/html; charset=UTF-8","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""}
+[info] +  functions: functions folder uploaded successfully 
+[info] i  functions: creating Node.js 14 function annotateImage(us-central1)... 
+[debug] [2021-11-02T13:34:47.086Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/javaproject-caneat/locations/us-central1/functions  
+ {"name":"projects/javaproject-caneat/locations/us-central1/functions/annotateImage","sourceUploadUrl":"https://storage.googleapis.com/gcf-upload-us-central1-43fbe8fb-1398-4bce-8470-ec1120e915e0/839139e4-68fd-42b7-b316-05e568e44489.zip?GoogleAccessId=service-229817774734@gcf-admin-robot.iam.gserviceaccount.com&Expires=1635861886&Signature=MHckooaHUvoaEeUjqpxJeRhI%2FUApRB9qypJPARBTDmS%2FqY0IiAvh1AG4cenPYBNOaD3Cn1DGbT1p2VxyyKoOzaHef7LgB9CRnsv2i41J4cKYS4tRAMqRIMvk5BCv2q3shIJuFpUnl1fQaDI2LxhlxwE9Zt4jDTbbmnlfknu8qgW3%2BQsvEi7w%2B5aTdVHsSOClBVTR5gyvmLxP6uxZHEvvu1zb87BY2nxMBCZf0jMoXEiD%2FRCtoLTzYepnN1fekAyT5K%2Bxs49J%2BGwowYtKeCF3zz4JBZ1t7loBG509py6M2k5Fb7kcpycS8BPAO1nfrDmaDqDmxTJdKpRuoulADhjDfw%3D%3D","entryPoint":"annotateImage","runtime":"nodejs14","labels":{"deployment-callable":"true","deployment-tool":"cli-firebase"},"httpsTrigger":{},"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"javaproject-caneat\",\"databaseURL\":\"https://javaproject-caneat-default-rtdb.firebaseio.com\",\"storageBucket\":\"javaproject-caneat.appspot.com\",\"locationId\":\"us-central\"}","GCLOUD_PROJECT":"javaproject-caneat"}}
+[debug] [2021-11-02T13:34:47.988Z] <<< HTTP RESPONSE 400 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Tue, 02 Nov 2021 13:34:47 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:34:47.988Z] <<< HTTP RESPONSE BODY {"error":{"code":400,"message":"Default service account 'javaproject-caneat@appspot.gserviceaccount.com' doesn't exist. Please recreate this account (for example by disabling and enabling the Cloud Functions API), or specify a different account. Please visit https://cloud.google.com/functions/docs/troubleshooting for in-depth troubleshooting documentation.","status":"FAILED_PRECONDITION"}}
+[warn] !  functions: failed to create function projects/javaproject-caneat/locations/us-central1/functions/annotateImage 
+[debug] [2021-11-02T13:34:47.992Z] Total Function Deployment time: 905
+[debug] [2021-11-02T13:34:47.992Z] 1 Functions Deployed
+[debug] [2021-11-02T13:34:47.992Z] 1 Functions Errored
+[debug] [2021-11-02T13:34:47.992Z] 0 Function Deployments Aborted
+[debug] [2021-11-02T13:34:47.992Z] Average Function Deployment time: 904
+[info] 
+[info] Functions deploy had errors with the following functions:
+	annotateImage(us-central1)
+[info] 
+[info] Because there were errors creating or updating functions, the following functions were not deleted
+[info] To delete these, use firebase functions:delete
+[debug] [2021-11-02T13:34:48.255Z] Missing URI for HTTPS function in printTriggerUrls. This shouldn't happen
+[info] i  functions: cleaning up build files... 
+[debug] [2021-11-02T13:34:48.257Z] > refreshing access token with scopes: []
+[debug] [2021-11-02T13:34:48.258Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-02T13:34:48.452Z] <<< HTTP RESPONSE 200 {"date":"Tue, 02 Nov 2021 13:34:48 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-02T13:34:48.487Z] >>> [apiv2][query] GET https://us.gcr.io/v2/javaproject-caneat/gcf/us-central1/tags/list [none]
+[debug] [2021-11-02T13:34:48.914Z] <<< [apiv2][status] GET https://us.gcr.io/v2/javaproject-caneat/gcf/us-central1/tags/list 200
+[debug] [2021-11-02T13:34:48.914Z] <<< [apiv2][body] GET https://us.gcr.io/v2/javaproject-caneat/gcf/us-central1/tags/list {"child":[],"manifest":{},"name":"javaproject-caneat/gcf/us-central1","tags":[]}
+[debug] [2021-11-02T13:34:48.914Z] Could not find image for function projects/javaproject-caneat/locations/us-central1/functions/annotateImage
+[debug] [2021-11-02T13:34:49.185Z] Error: Failed to create function annotateImage in region us-central1
+    at C:\Users\banja\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:35:11
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Fabricator.createV1Function (C:\Users\banja\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:158:32)
+    at async Fabricator.createEndpoint (C:\Users\banja\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:113:13)
+    at async handle (C:\Users\banja\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:72:17)
+[error] 
+[error] Error: There was an error deploying functions

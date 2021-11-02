@@ -27,6 +27,7 @@ import com.google.gson.JsonParser;
 import com.google.gson.JsonPrimitive;
 
 import java.io.ByteArrayOutputStream;
+import java.util.Objects;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -114,17 +115,39 @@ public class MainActivity extends AppCompatActivity {
 
             //함수호출
             annotateImage(request.toString())
-                    .addOnCompleteListener(new OnCompleteListener<JsonElement>() {
-                        @Override
-                        public void onComplete(@NonNull Task<JsonElement> task) {
-                            if (!task.isSuccessful()) {
-                                Toast toast = Toast.makeText(MainActivity.this, "이미지 없음", Toast.LENGTH_SHORT);
-                                toast.show();
-                            } else {
-                                //인식된 텍스트 문자열로 가져오기
-                                JsonObject annotation = task.getResult().getAsJsonArray().get(0).getAsJsonObject().get("fullTextAnnotation").getAsJsonObject();
-                                System.out.format("%nComplete annotation:%n");
-                                System.out.format("%s%n", annotation.get("text").getAsString());
+                    .addOnCompleteListener(task -> {
+                        if (!task.isSuccessful()) {
+                            Toast toast = Toast.makeText(MainActivity.this, "이미지 없음", Toast.LENGTH_SHORT);
+                            toast.show();
+                        } else {
+                            //인식된 텍스트 문자열로 가져오기
+                            JsonObject annotation = Objects.requireNonNull(task.getResult()).getAsJsonArray().get(0).getAsJsonObject().get("fullTextAnnotation").getAsJsonObject();
+                            System.out.format("%nComplete annotation:%n");
+                            System.out.format("%s%n", annotation.get("text").getAsString());
+                            for (JsonElement page : annotation.get("pages").getAsJsonArray()) {
+                                StringBuilder pageText = new StringBuilder();
+                                for (JsonElement block : page.getAsJsonObject().get("blocks").getAsJsonArray()) {
+                                    StringBuilder blockText = new StringBuilder();
+                                    for (JsonElement para : block.getAsJsonObject().get("paragraphs").getAsJsonArray()) {
+                                        StringBuilder paraText = new StringBuilder();
+                                        for (JsonElement word : para.getAsJsonObject().get("words").getAsJsonArray()) {
+                                            StringBuilder wordText = new StringBuilder();
+                                            for (JsonElement symbol : word.getAsJsonObject().get("symbols").getAsJsonArray()) {
+                                                wordText.append(symbol.getAsJsonObject().get("text").getAsString());
+                                                System.out.format("Symbol text: %s (confidence: %f)%n", symbol.getAsJsonObject().get("text").getAsString(), symbol.getAsJsonObject().get("confidence").getAsFloat());
+                                            }
+                                            System.out.format("Word text: %s (confidence: %f)%n%n", wordText.toString(), word.getAsJsonObject().get("confidence").getAsFloat());
+                                            System.out.format("Word bounding box: %s%n", word.getAsJsonObject().get("boundingBox"));
+                                            paraText.append(wordText.toString()).append(" ");
+                                        }
+                                        System.out.format("%nParagraph:%n%s%n", paraText);
+                                        System.out.format("Paragraph bounding box: %s%n", para.getAsJsonObject().get("boundingBox"));
+                                        System.out.format("Paragraph Confidence: %f%n", para.getAsJsonObject().get("confidence").getAsFloat());
+                                        blockText.append(paraText);
+                                    }
+                                    pageText.append(blockText);
+                                }
+                                textview1.setText(pageText);
                             }
                         }
                     });
@@ -156,12 +179,8 @@ public class MainActivity extends AppCompatActivity {
         return mFunctions
                 .getHttpsCallable("annotateImage")
                 .call(requestJson)
-                .continueWith(task -> {
-                    // This continuation runs on either success or failure, but if the task
-                    // has failed then getResult() will throw an Exception which will be
-                    // propagated down.
-                    return JsonParser.parseString(new Gson().toJson(task.getResult().getData()));
-                });
+                .continueWith(task -> JsonParser.parseString(new Gson().toJson(Objects.requireNonNull(task.getResult()).getData())));
+
     }
 
 
