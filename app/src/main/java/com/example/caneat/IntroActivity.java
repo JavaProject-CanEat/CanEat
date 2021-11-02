@@ -170,5 +170,6 @@ public class IntroActivity  extends AppCompatActivity  {
             }
         }
         // [END get_provider_data]
+
     }
 }

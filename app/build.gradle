@@ -42,7 +42,7 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:28.4.1'
     implementation 'com.android.support.constraint:constraint-layout:2.0.4'
     implementation 'com.google.firebase:firebase-database:20.0.2'
-    testImplementation 'junit:junit:4.+'
+    testImplementation 'junit:junit:'
     //noinspection GradleCompatible,GradleCompatible
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
@@ -58,11 +58,14 @@ dependencies {
     // For example, declare the dependencies for Firebase Authentication and Cloud Firestore
     implementation 'com.google.firebase:firebase-auth'
     implementation 'com.google.firebase:firebase-firestore'
-    implementation 'com.google.firebase:firebase-core:17.23'
+    implementation 'com.google.firebase:firebase-core:20.0.0'
     implementation 'com.google.android.gms:play-services-auth:19.2.0'
     implementation "com.firebaseui:firebase-ui-auth:8.0.0"
     implementation 'com.google.firebase:firebase-storage:20.0.0'
-    implementation 'com.google.firebase:firebase-firestore:23.0.4'
+    implementation 'com.google.firebase:firebase-firestore:24.0.0'
 
-    implementation 'com.journeyapps:zxing-android-embedded:3.6.0'
+    //ocr ml 키트
+    implementation 'com.google.firebase:firebase-functions:20.0.1'
+    implementation 'com.google.code.gson:gson:2.8.8'
+
 }

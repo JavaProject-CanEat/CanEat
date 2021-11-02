@@ -8,22 +8,27 @@
     android:orientation="vertical"
     android:background="@color/CanEatbackground">
 
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_width="391dp"
+        android:layout_height="652dp"
         android:layout_gravity="top"
         android:background="@color/white"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:id="@+id/image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
             android:background="@drawable/caneaticon"
             android:contentDescription="Can Eat?">
 
         </ImageView>
+
 
         <Button
             android:id="@+id/myinfo"
@@ -36,17 +41,23 @@
 
         </Button>
 
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"></TextView>
 
     </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="680dp"
-        android:orientation="vertical"
-
+        android:layout_width="405dp"
+        android:layout_height="594dp"
         android:layout_marginTop="40dp"
+
+        android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        tools:layout_editor_absoluteX="0dp">
+        tools:layout_editor_absoluteX="6dp"
+        tools:ignore="MissingConstraints">
 
 
         <LinearLayout
@@ -183,10 +194,12 @@
         android:layout_gravity="bottom"
         android:background="@drawable/save_button"
         android:drawableTop="@android:drawable/ic_menu_camera"
-
+        android:onClick="showCameraBtn"
         android:text="성분표 사진찍기"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
